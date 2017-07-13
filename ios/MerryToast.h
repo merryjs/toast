@@ -5,7 +5,7 @@
 #import <React/RCTBridgeModule.h>
 #endif
 
-#import <Toast/UIView+Toast.h>
+#import "Toast/UIView+Toast.h"
 #import <UIKit/UIKit.h>
 
 NSInteger const MerryToastBottomOffset = 40;
@@ -14,10 +14,6 @@ double const MerryToastLongDuration = 5.0;
 NSInteger const MerryToastGravityBottom = 1;
 NSInteger const MerryToastGravityCenter = 2;
 NSInteger const MerryToastGravityTop = 3;
-
-NSString * CSToastPositionTop       = @"CSToastPositionTop";
-NSString * CSToastPositionCenter    = @"CSToastPositionCenter";
-NSString * CSToastPositionBottom    = @"CSToastPositionBottom";
 
 @interface MerryToast : NSObject <RCTBridgeModule>
 

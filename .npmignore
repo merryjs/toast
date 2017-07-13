@@ -33,3 +33,4 @@ project.xcworkspace
 tsconfig.json
 index.ts      
 .gitattributes
+preview.gif

@@ -1,7 +1,7 @@
 
 # @merryjs/toast
 > Same as ToastAndroid, ios using https://github.com/scalessec/Toast
-
+![preview.gif](preview.gif)
 ## Getting started
 
 `$ npm install @merryjs/toast --save`
