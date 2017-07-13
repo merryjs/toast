@@ -1,0 +1,25 @@
+{
+  "name": "@merryjs/toast",
+  "version": "1.0.0",
+  "description": "## Getting started",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "sqibang@gmail.com",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": "^0.41.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merryjs/toast.git"
+  },
+  "bugs": {
+    "url": "https://github.com/merryjs/toast/issues"
+  },
+  "homepage": "https://github.com/merryjs/toast#readme"
+}
