@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* MerryToast.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* MerryToast.m */; };
-		E4E08DA70A79B6579794A59F /* libPods-MerryToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31F536822C4CE81BA813B75 /* libPods-MerryToast.a */; };
+		E74F91B779BCE6A37D2AC228 /* Pods_MerryToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D0A6BC564D55B3A40C409F /* Pods_MerryToast.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,9 +25,9 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libMerryToast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMerryToast.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		21D0A6BC564D55B3A40C409F /* Pods_MerryToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MerryToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ABF2D90A50AEF8839C17559 /* Pods-MerryToast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerryToast.release.xcconfig"; path = "Pods/Target Support Files/Pods-MerryToast/Pods-MerryToast.release.xcconfig"; sourceTree = "<group>"; };
 		6DBDDFB73AD44FC7763E0458 /* Pods-MerryToast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerryToast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MerryToast/Pods-MerryToast.debug.xcconfig"; sourceTree = "<group>"; };
-		A31F536822C4CE81BA813B75 /* libPods-MerryToast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MerryToast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5881CC2AC0600A0062D /* MerryToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerryToast.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* MerryToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerryToast.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4E08DA70A79B6579794A59F /* libPods-MerryToast.a in Frameworks */,
+				E74F91B779BCE6A37D2AC228 /* Pods_MerryToast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +64,7 @@
 		447A6F449B72F70AEBEA6D5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A31F536822C4CE81BA813B75 /* libPods-MerryToast.a */,
+				21D0A6BC564D55B3A40C409F /* Pods_MerryToast.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -266,11 +266,7 @@
 					"$(SRCROOT)/../../react-native/React/**",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"$(inherited)",
-					"-lc++",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = MerryToast;
 				SKIP_INSTALL = YES;
 			};
@@ -287,11 +283,7 @@
 					"$(SRCROOT)/../../react-native/React/**",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"$(inherited)",
-					"-lc++",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = MerryToast;
 				SKIP_INSTALL = YES;
 			};

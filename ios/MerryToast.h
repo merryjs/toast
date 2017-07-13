@@ -6,7 +6,7 @@
 #endif
 
 #import <UIKit/UIKit.h>
-#import <Toast.h>
+#import <Toast/UIView+Toast.h>
 
 @interface MerryToast : NSObject <RCTBridgeModule>
 
