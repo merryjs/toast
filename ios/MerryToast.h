@@ -15,6 +15,10 @@ NSInteger const MerryToastGravityBottom = 1;
 NSInteger const MerryToastGravityCenter = 2;
 NSInteger const MerryToastGravityTop = 3;
 
+NSString * CSToastPositionTop       = @"CSToastPositionTop";
+NSString * CSToastPositionCenter    = @"CSToastPositionCenter";
+NSString * CSToastPositionBottom    = @"CSToastPositionBottom";
+
 @interface MerryToast : NSObject <RCTBridgeModule>
 
 @end

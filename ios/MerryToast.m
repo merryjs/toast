@@ -31,7 +31,7 @@ RCT_EXPORT_MODULE()
           .size;
 
   int height = MIN(keyboardSize.height, keyboardSize.width);
-  int width = MAX(keyboardSize.height, keyboardSize.width);
+//  int width = MAX(keyboardSize.height, keyboardSize.width);
 
   _keyOffset = height;
 }
@@ -64,57 +64,55 @@ RCT_EXPORT_METHOD(showWithGravity
                   : (nonnull NSNumber *)gravity {
                     [self _show:msg duration:duration gravity:gravity.intValue];
                   });
+- (UIViewController *)visibleViewController:(UIViewController *)rootViewController
+{
+    if (rootViewController.presentedViewController == nil)
+    {
+        return rootViewController;
+    }
+    if ([rootViewController.presentedViewController isKindOfClass:[UINavigationController class]])
+    {
+        UINavigationController *navigationController = (UINavigationController *)rootViewController.presentedViewController;
+        UIViewController *lastViewController = [[navigationController viewControllers] lastObject];
 
-- (UIViewController *)visibleViewController:
-    (UIViewController *)rootViewController {
-  if (rootViewController.presentedViewController == nil) {
-    return rootViewController;
-  }
-  if ([rootViewController.presentedViewController
-          isKindOfClass:[UINavigationController class]]) {
-    UINavigationController *navigationController =
-        (UINavigationController *)rootViewController.presentedViewController;
-    UIViewController *lastViewController =
-        [[navigationController viewControllers] lastObject];
+        return [self visibleViewController:lastViewController];
+    }
+    if ([rootViewController.presentedViewController isKindOfClass:[UITabBarController class]])
+    {
+        UITabBarController *tabBarController = (UITabBarController *)rootViewController.presentedViewController;
+        UIViewController *selectedViewController = tabBarController.selectedViewController;
 
-    return [self visibleViewController:lastViewController];
-  }
-  if ([rootViewController.presentedViewController
-          isKindOfClass:[UITabBarController class]]) {
-    UITabBarController *tabBarController =
-        (UITabBarController *)rootViewController.presentedViewController;
-    UIViewController *selectedViewController =
-        tabBarController.selectedViewController;
+        return [self visibleViewController:selectedViewController];
+    }
 
-    return [self visibleViewController:selectedViewController];
-  }
+    UIViewController *presentedViewController = (UIViewController *)rootViewController.presentedViewController;
 
-  UIViewController *presentedViewController =
-      (UIViewController *)rootViewController.presentedViewController;
-
-  return [self visibleViewController:presentedViewController];
+    return [self visibleViewController:presentedViewController];
 }
 
 - (void)_show:(NSString *)msg
      duration:(NSTimeInterval)duration
       gravity:(NSInteger)gravity {
   dispatch_async(dispatch_get_main_queue(), ^{
-    // UIView *root = [[[[[UIApplication sharedApplication] delegate] window]
-    // rootViewController] view];
+    
     UIViewController *ctrl =
         [self visibleViewController:[UIApplication sharedApplication]
                                         .keyWindow.rootViewController];
     UIView *root = [ctrl view];
+    
     CGRect bound = root.bounds;
     bound.size.height -= _keyOffset;
     if (bound.size.height > MerryToastBottomOffset * 2) {
       bound.origin.y += MerryToastBottomOffset;
       bound.size.height -= MerryToastBottomOffset * 2;
     }
+      
     UIView *view = [[UIView alloc] initWithFrame:bound];
+      
     view.userInteractionEnabled = NO;
     [root addSubview:view];
     UIView __weak *blockView = view;
+      
     id position;
     if (gravity == MerryToastGravityTop) {
       position = CSToastPositionTop;

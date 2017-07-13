@@ -1,5 +1,6 @@
 
 # @merryjs/toast
+> Same as ToastAndroid, ios using https://github.com/scalessec/Toast
 
 ## Getting started
 
@@ -21,10 +22,14 @@
 
 
 ## Usage
-```javascript
-import MerryToast from '@merryjs/toast';
 
-// TODO: What to do with the module?
-MerryToast;
+Please see http://facebook.github.io/react-native/docs/toastandroid.html
+
+```javascript
+
+import MerryToast from '@merryjs/toast';
+MerryToast.show('A pikachu appeared nearby !', MerryToast.SHORT);
+MerryToast.showWithGravity('All Your Base Are Belong To Us', MerryToast.SHORT, MerryToast.CENTER);
+
 ```
   
