@@ -8,8 +8,10 @@
   "license": "MIT",
   "devDependencies": {
     "@types/react-native": "^0.46.1",
-    "react-native": "^0.41.2",
     "typescript": "^2.4.1"
+  },
+  "peerDependencies": {
+    "react-native": "~0.41.2"
   },
   "repository": {
     "type": "git",
