@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* MerryToast.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* MerryToast.m */; };
+		E3BF5F4C67D018D4979F8F26 /* libPods-MerryToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E68E9F6250A5758B36CC74 /* libPods-MerryToast.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,8 +25,11 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libMerryToast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMerryToast.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		45E68E9F6250A5758B36CC74 /* libPods-MerryToast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MerryToast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		901CA6D577FF657CE64142C2 /* Pods-MerryToast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerryToast.release.xcconfig"; path = "Pods/Target Support Files/Pods-MerryToast/Pods-MerryToast.release.xcconfig"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* MerryToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerryToast.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* MerryToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerryToast.m; sourceTree = "<group>"; };
+		D64E7C8DE14D2FE9FF0AF88A /* Pods-MerryToast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerryToast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MerryToast/Pods-MerryToast.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3BF5F4C67D018D4979F8F26 /* libPods-MerryToast.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,13 +52,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		17AF4215D4E0B610163F9436 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D64E7C8DE14D2FE9FF0AF88A /* Pods-MerryToast.debug.xcconfig */,
+				901CA6D577FF657CE64142C2 /* Pods-MerryToast.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
 				B3E7B5881CC2AC0600A0062D /* MerryToast.h */,
 				B3E7B5891CC2AC0600A0062D /* MerryToast.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				17AF4215D4E0B610163F9436 /* Pods */,
+				A62C1BFCD1B0B51386A50A7E /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		A62C1BFCD1B0B51386A50A7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45E68E9F6250A5758B36CC74 /* libPods-MerryToast.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -63,9 +87,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "MerryToast" */;
 			buildPhases = (
+				6ACB5937FC0BC883C8AFC517 /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
+				4B1EF07A8BFB94E58545FE1C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -106,6 +132,42 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B1EF07A8BFB94E58545FE1C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MerryToast/Pods-MerryToast-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6ACB5937FC0BC883C8AFC517 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MerryToast-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
@@ -195,9 +257,10 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D64E7C8DE14D2FE9FF0AF88A /* Pods-MerryToast.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
+					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
@@ -211,6 +274,7 @@
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 901CA6D577FF657CE64142C2 /* Pods-MerryToast.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
