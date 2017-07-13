@@ -1,18 +1,15 @@
 {
   "name": "@merryjs/toast",
   "version": "1.0.0",
-  "description": "## Getting started",
+  "description": "A Toast for React Native ",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "react-native"
-  ],
-  "author": "sqibang@gmail.com",
+  "keywords": ["react-native", "toast"],
+  "author": "bang88",
   "license": "MIT",
-  "peerDependencies": {
-    "react-native": "^0.41.2"
+  "devDependencies": {
+    "@types/react-native": "^0.46.1",
+    "react-native": "^0.41.2",
+    "typescript": "^2.4.1"
   },
   "repository": {
     "type": "git",
