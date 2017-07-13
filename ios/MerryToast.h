@@ -5,7 +5,9 @@
 #import <React/RCTBridgeModule.h>
 #endif
 
+#import <UIKit/UIKit.h>
+#import <Toast.h>
+
 @interface MerryToast : NSObject <RCTBridgeModule>
 
 @end
-  
