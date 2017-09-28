@@ -16,16 +16,17 @@ export default {
   TOP: Toast.TOP,
   BOTTOM: Toast.BOTTOM,
   CENTER: Toast.CENTER,
-  
+
   /**
    * @param {string} message A string with the text to toast
    * @param {number} duration The duration of the toast. May be Toast.SHORT or Toast.LONG
    */
-  show: function(message: string, duration: number) {
+  show: function(message: string, duration?: number) {
     Toast.show(message, (duration = this.SHORT))
-  },
+	},
+
   /**
-   * `gravity` may be ToastAndroid.TOP, ToastAndroid.BOTTOM, ToastAndroid.CENTER 
+   * `gravity` may be ToastAndroid.TOP, ToastAndroid.BOTTOM, ToastAndroid.CENTER
    * @param {string} message A string with the text to toast
    * @param {number} duration The duration of the toast. May be Toast.SHORT or Toast.LONG
    * @param {number} gravity Specify the layout gravity. May be Toast.TOP or Toast.BOTTOM or Toast.CENTER
