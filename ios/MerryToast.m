@@ -39,7 +39,9 @@ RCT_EXPORT_MODULE()
 - (void)keyboardWillHiden:(NSNotification *)notification {
   _keyOffset = 0;
 }
-
++ (BOOL) requiresMainQueueSetup{
+    return YES;
+}
 - (NSDictionary *)constantsToExport {
   return @{
     @"SHORT" : [NSNumber numberWithDouble:MerryToastShortDuration],
@@ -94,25 +96,25 @@ RCT_EXPORT_METHOD(showWithGravity
      duration:(NSTimeInterval)duration
       gravity:(NSInteger)gravity {
   dispatch_async(dispatch_get_main_queue(), ^{
-    
+
     UIViewController *ctrl =
         [self visibleViewController:[UIApplication sharedApplication]
                                         .keyWindow.rootViewController];
     UIView *root = [ctrl view];
-    
+
     CGRect bound = root.bounds;
     bound.size.height -= _keyOffset;
     if (bound.size.height > MerryToastBottomOffset * 2) {
       bound.origin.y += MerryToastBottomOffset;
       bound.size.height -= MerryToastBottomOffset * 2;
     }
-      
+
     UIView *view = [[UIView alloc] initWithFrame:bound];
-      
+
     view.userInteractionEnabled = NO;
     [root addSubview:view];
     UIView __weak *blockView = view;
-      
+
     id position;
     if (gravity == MerryToastGravityTop) {
       position = CSToastPositionTop;
