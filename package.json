@@ -1,6 +1,6 @@
 {
   "name": "@merryjs/toast",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Toast for React Native ",
   "main": "index.js",
   "keywords": [
